@@ -130,11 +130,19 @@
 
         <activity android:name=".Settings$WirelessSettings"
             android:label="@string/header_category_wireless_networks">
-            <intent-filter android:priority="4">
+            <intent-filter android:priority="5">
                 <action android:name="com.android.settings.category.wireless" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".Settings$fsadinoSettings"
+            android:label="@string/header_category_fsadino">
+            <intent-filter android:priority="4">
+                 <action android:name="com.android.settings.category.fsadino" />
+                 <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>         
 
         <activity android:name=".Settings$DeviceSettings"
             android:label="@string/header_category_device">
@@ -179,6 +187,40 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- FSadino Extras -->
+ 
+        <activity android:name="Settings$fsadinoSettingsActivity"
+                android:label="@string/fsadino_settings_title"
+                 android:icon="@drawable/ic_xd_fsadino"
+                 android:taskAffinity="">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="com.android.settings.SHORTCUT" />
+             </intent-filter>
+             <intent-filter android:priority="3">
+                 <action android:name="com.android.settings.action.SETTINGS" />
+             </intent-filter>
+             <meta-data android:name="com.android.settings.category"
+                 android:value="com.android.settings.category.fsadino" />
+             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                 android:value="com.android.settings.fsadino.ProcessStatsSummary" />
+         </activity>
+  
+        <!-- Keep compatibility with old shortcuts. -->
+         <activity android:name="Settings$fsadinoSettingsActivity"
+             android:label="@string/fsadino_settings_title"
+             android:taskAffinity="">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                 android:value="com.android.settings.fsadino.fsadinoSettings" />
+         </activity>
+ 
+         <activity
+              android:name=".fsadino.fsadinoSettings" />
 
         <!-- Wireless Controls -->
 
