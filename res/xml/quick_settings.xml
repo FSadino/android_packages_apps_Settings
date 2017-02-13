@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
-     Copyright (C) 2017 FSadino Rom
+<!-- Copyright (C) 2017 FSadino Rom
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -11,17 +10,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-<!-- Quick Settings -->
-    <string name="notification_qstiles_title">Quick Settings</string>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/notification_qstiles_title">
 
-<!-- FSadino Extras -->
-    <string name="header_category_fsadino">FSadino</string>
-    <string name="fsadino_settings_title">FSadino Extras</string>
+        <com.android.settings.preference.SecureSettingSwitchPreference
+            android:key="qs_wifi_easy_toggle"
+            android:title="@string/qs_wifi_easy_toggle_title"
+            android:summary="@string/qs_wifi_easy_toggle_summary"
+            android:defaultValue="false" />
 
-<!-- Wifi Easy Toggle  -->
-    <string name="qs_wifi_easy_toggle_title">WiFi easy toggle</string>
-    <string name="qs_wifi_easy_toggle_summary">Makes it so one click will turn WiFi on or off instead of taking you to settings</string>
-    
-</resources>
+</PreferenceScreen>
