@@ -13,6 +13,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+<!-- Quick Settings -->
+    <string name="notification_qstiles_title">Quick Settings</string>
+
 <!-- FSadino Extras -->
     <string name="header_category_fsadino">FSadino</string>
     <string name="fsadino_settings_title">FSadino Extras</string>
